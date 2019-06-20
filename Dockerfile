@@ -20,7 +20,7 @@ FROM debian:stretch-slim
 WORKDIR /usr/src/vigil
 
 COPY ./res/assets/ ./res/assets/
-COPY --from=build /usr/src/app/target/release/vigil /usr/local/bin/vigil
+COPY --from=build /app/target/release/vigil /usr/local/bin/vigil
 
 RUN apt-get update
 RUN apt-get install -y libssl-dev libcurl3
